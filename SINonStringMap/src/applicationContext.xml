@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="ans1" class="Answer">
+<property name="id" value="1"></property>
+<property name="name" value="Java is programming language"></property>
+</bean>
+
+<bean id="ans2" class="Answer">
+<property name="id" value="2"></property>
+<property name="name" value="Java is a coffee name"></property>
+</bean>
+
+<bean id="loc1" class="Location">
+<property name="city" value="walnut creek"></property>
+</bean>
+
+<bean id="loc2" class="Location">
+<property name="city" value="DC"></property>
+</bean>
+
+<bean id="q" class="Question">
+<property name="id" value="100 "></property>
+<property name="name" value="What is java"></property>
+<property name="answers">
+<map>
+<entry key-ref="ans1" value-ref="loc1"></entry>
+<entry key-ref="ans2" value-ref="loc2"></entry>
+</map>
+</property>
+</bean>
+
+</beans>
